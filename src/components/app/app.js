@@ -5,6 +5,7 @@ import SearchPanel from "../search-panel"
 import PostStatusFilter from "../post-status-filter"
 import PostList from "../post-list"
 import PostAddForm from "../post-add-form"
+import WhoAmI from "./stateWork"
 
 import "./app.css"
 import "../app-header/app-header.css"
@@ -24,6 +25,7 @@ const App = () => {
             </div>
             <PostList/>
             <PostAddForm/>
+            <WhoAmI name="Vielen" surname="Danke" link="google.com" years={29}/>
         </div>
     )
 }
