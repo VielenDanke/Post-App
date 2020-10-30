@@ -5,17 +5,18 @@ import SearchPanel from "../search-panel"
 import PostStatusFilter from "../post-status-filter"
 import PostList from "../post-list"
 import PostAddForm from "../post-add-form"
-import WhoAmI from "./stateWork"
+// import WhoAmI from "./stateWork"
 
 import "./app.css"
-import "../app-header/app-header.css"
-import "../post-add-form/post-add-form.css"
-import "../post-list/post-list.css"
-import "../post-list-item/post-list-item.css"
-import "../post-status-filter/post-status-filter.css"
-import "../search-panel/search-panel.css"
 
 const App = () => {
+
+    const data = [
+        {label: "Going to learn react", id: 'asdqw', important: true},
+        {label: "That is so good", id: 'sada', important: false},
+        {label: "I need a break...", id: 'qqqww', important: false},
+    ]
+
     return (
         <div className="app">
             <AppHeader/>
@@ -23,9 +24,9 @@ const App = () => {
                 <SearchPanel/>
                 <PostStatusFilter/>
             </div>
-            <PostList/>
+            <PostList posts={data}/>
             <PostAddForm/>
-            <WhoAmI name="Vielen" surname="Danke" link="google.com" years={29}/>
+            {/* <WhoAmI name="Vielen" surname="Danke" link="google.com" years={29}/> */}
         </div>
     )
 }
