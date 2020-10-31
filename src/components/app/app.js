@@ -8,6 +8,16 @@ import PostAddForm from "../post-add-form"
 // import WhoAmI from "./stateWork"
 
 import "./app.css"
+import styled from 'styled-components'
+
+const AppBlock = styled.div`
+    margin: 0 auto;
+    max-width: 800px;
+`
+
+// const StyledAppBlock = styled(AppBlock)`
+//     background-color: grey;
+// `
 
 const App = () => {
 
@@ -18,7 +28,7 @@ const App = () => {
     ]
 
     return (
-        <div className="app">
+        <AppBlock>
             <AppHeader/>
             <div className="search-panel d-flex">
                 <SearchPanel/>
@@ -27,7 +37,7 @@ const App = () => {
             <PostList posts={data}/>
             <PostAddForm/>
             {/* <WhoAmI name="Vielen" surname="Danke" link="google.com" years={29}/> */}
-        </div>
+        </AppBlock>
     )
 }
 
